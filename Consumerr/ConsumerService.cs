@@ -31,9 +31,9 @@ namespace Consumer
 
                 result.Add(data);
                 var jsonResult = JsonConvert.SerializeObject(result);
-
-                File.Create($"E:\\C#\\RabbitMQ\\Consumerr\\Files\\{DateTime.Now.Ticks}.txt");
-                using (var stream2 = new StreamWriter($"E:\\C#\\RabbitMQ\\Consumerr\\Files\\{DateTime.Now.Ticks}.txt"))
+                var path = $"E:\\C#\\RabbitMQ\\Consumerr\\Files\\{DateTime.Now.Ticks}.txt";
+                File.Create(path);
+                using (var stream2 = new StreamWriter(path))
                 {
                     stream2.Write(jsonResult);
                 }

@@ -12,7 +12,7 @@ namespace General
                 VirtualHost = "/",
                 UserName = "guest",
                 Password = "guest",
-                Port = 5762
+                Port = 5672
             }.CreateConnection().CreateModel();
         }
     }
